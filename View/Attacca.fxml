@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="652.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AttaccaController">
+   <children>
+      <Pane layoutX="26.0" layoutY="16.0" prefHeight="186.0" prefWidth="511.0" style="-fx-border-color: lightgrey; -fx-border-radius: 2%;">
+         <children>
+            <TextField fx:id="inputAttacco" layoutX="313.0" layoutY="25.0" promptText="ex. 101100101011" />
+            <Label fx:id="label2" layoutX="30.0" layoutY="25.0" prefHeight="25.0" prefWidth="238.0" text="Inserisci un messaggio per provare l'attacco" />
+            <Button fx:id="button2" layoutX="208.0" layoutY="108.0" mnemonicParsing="false" onAction="#button2Clicked" text="Trova chiave" />
+            <Label layoutX="30.0" layoutY="73.0" text="Chiave Utilizzata per criptare" />
+            <TextField fx:id="chiaveAttacco" layoutX="239.0" layoutY="69.0" promptText="ex. 110100011" />
+            <Button fx:id="button3" layoutX="406.0" layoutY="69.0" mnemonicParsing="false" onAction="#button3Clicked" text="Cambia" />
+            <Label fx:id="labelOutput" layoutX="170.0" layoutY="148.0" text="Chiave trovata" />
+            <Label fx:id="outputAttacco" layoutX="259.0" layoutY="148.0" text="110100011" textFill="#46b52d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="labelPane" layoutX="35.0" layoutY="217.0" prefHeight="101.0" prefWidth="503.0">
+         <children>
+            <Label layoutX="42.0" layoutY="14.0" text="Messaggio inserito [M]" />
+            <Label fx:id="messaggioInserito" layoutX="307.0" layoutY="14.0" text="100010  101100" />
+            <Label layoutX="42.0" layoutY="39.0" text="Messaggio generato 1 [M1]" />
+            <Label layoutX="42.0" layoutY="67.0" text="Messaggio generato 2 [M2]" />
+            <Label fx:id="messaggioGenerato1" layoutX="307.0" layoutY="39.0" text="011010  101100" />
+            <Label fx:id="messaggioGenerato2" layoutX="307.0" layoutY="67.0" text="101101  101100" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrollPrimi" layoutX="35.0" layoutY="326.0" prefHeight="141.0" prefWidth="503.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="485.0">
+               <children>
+                  <Pane fx:id="PanePrimi" prefHeight="320.0" prefWidth="484.0" />
+                  <Label layoutX="280.0" layoutY="14.0" text="Primi 4 bit candidati pre M-M2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="14.0" text="Primi 4 bit candidati pre M-M1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane fx:id="scrollUltimi" layoutX="35.0" layoutY="488.0" prefHeight="141.0" prefWidth="503.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="485.0">
+               <children>
+                  <Pane fx:id="PaneUltimi" prefHeight="320.0" prefWidth="458.0" />
+                  <Label layoutX="280.0" layoutY="14.0" text="Ultimi 4 bit candidati pre M-M2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="14.0" text="Ultimi 4 bit candidati pre M-M1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

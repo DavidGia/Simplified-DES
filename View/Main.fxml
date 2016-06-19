@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="66.0" prefHeight="574.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Cripta">
+               <content>
+                  <fx:include fx:id="cripta" source="Cripta.fxml" />
+               </content>
+          </Tab>
+            <Tab closable="false" text="Decripta">
+              <content>
+                  <fx:include fx:id="decripta" source="Decripta.fxml" />
+              </content>
+            </Tab>
+          <Tab closable="false" text="Crittoanalisi a 3 Round">
+               <content>
+                   <fx:include fx:id="attacca" source="Attacca.fxml" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
